@@ -62,13 +62,7 @@ const prev =()=>{
     }
 }
 
-
-
-
 const dispatch = useDispatch()
-
-
-
 const movieList = useSelector((state) => state.favorit.favouritsMovie);
 
 const [favList,setfavList]= useState(movieList)
@@ -87,15 +81,13 @@ const addToFavoour = (filmID,filmPoster,filmTitle)=>{
 
 dispatch(addFavourit(favList))
 
-
 const {titleClicked,setTitleClicked}= useContext(counterContext)
-
 
   return (
     <>
     <div className='movieBack'>
     <div className="input-group rounded container pt-4 mt-5 ">
-  <input type="search" className="form-control rounded"onChange={(e)=>{inputSearch(e)}} placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+    <input type="search" className="form-control rounded"onChange={(e)=>{inputSearch(e)}} placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
     <Link to={`${search.dd}`}>
     <button className="btn btn-primary" onClick={searchMovie} >Search</button>
     </Link>
